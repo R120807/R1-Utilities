@@ -17,3 +17,5 @@ local t = logged({x = 1})
 print(t.x)
 t.x = 99
 print(t.x)
+
+return {}

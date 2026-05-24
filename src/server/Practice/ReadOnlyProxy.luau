@@ -8,9 +8,9 @@
     setmetatable(proxy, mt) then return proxy - is setting the metatable directly on the proxyTable
 ]]
 
-const function readOnly(t)
-   local proxy = {}
+local normalTbl = {}
 
+const function readOnly(t)
    local mt = {
         __index = t,
 
@@ -19,8 +19,8 @@ const function readOnly(t)
         end,
    }
 
-   setmetatable(proxy, mt)
-   return proxy
+   setmetatable(normalTbl, mt)
+   return normalTbl
 end
 
 local original = {x = 10, y = 10}
