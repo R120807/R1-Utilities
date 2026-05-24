@@ -23,3 +23,5 @@ type ErrorOptions = {
     context: string,
     kind: ErrorKind
 }
+
+export type Error = typeof(setmetatable({}, _))
